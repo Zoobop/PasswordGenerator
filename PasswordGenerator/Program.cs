@@ -2,6 +2,7 @@
 Console.ForegroundColor = ConsoleColor.Yellow;
 var length = 0;
 
+// Loop to validate input
 while (true)
 {
     Console.Clear();
@@ -14,6 +15,10 @@ while (true)
     }
 }
 
+// Display information
 var password = PasswordGenerator.Generate(length);
 
-Console.WriteLine($"Your new password: {password}");
+Console.WriteLine($"Your new password: {password}\n");
+
+Console.WriteLine("To use this password, copy the text, then press any key to close out.");
+Console.ReadKey();
