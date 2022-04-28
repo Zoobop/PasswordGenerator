@@ -11,7 +11,7 @@
         var password = string.Empty;
         for (var i = 0; i < length; i++)
         {
-            var selector = Random.Shared.Next(0, 2);
+            var selector = Random.Shared.Next(0, 3);
             password += selector switch
             {
                 1 => GetRandomNumber(),
@@ -25,5 +25,5 @@
 
     private static char GetRandomLetter() => _alphabet[Random.Shared.Next(0, _alphabet.Length - 1)];
     private static char GetRandomNumber() => _numbers[Random.Shared.Next(0, _numbers.Length - 1)];
-    private static char GetRandomSymbol() => _alphabet[Random.Shared.Next(0, _symbols.Length - 1)];
+    private static char GetRandomSymbol() => _symbols[Random.Shared.Next(0, _symbols.Length - 1)];
 }
